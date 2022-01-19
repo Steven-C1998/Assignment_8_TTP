@@ -16,6 +16,7 @@ export default class App extends React.Component {
       isFilled: false,
       mouseDown: false
     });
+    //this.fillUncolored = this.fillUncolored.bind(this)
   }
 
   //Functions for buttons
@@ -42,16 +43,16 @@ export default class App extends React.Component {
   }
 
   changeColor = (e) => {
-    console.log(this.columns)
+    //console.log(this.columns)
     let modifiedColor = e.target.value
-    console.log(e.target.value)
+    //console.log(e.target.value)
     this.setState({ color: modifiedColor })
 
   }
 
-  fillCells = () => {
-    this.setState({ isFilled: true })
-  }
+  // fillCells = () => {
+  //   this.setState({ isFilled: true })
+  // }
 
 
   render() {
@@ -62,7 +63,7 @@ export default class App extends React.Component {
           <button onClick={this.addColumns} id="colBtn" className="btns">Add Column</button>
           <button onClick={this.deleteRow} id="delRow" className="btns">Delete Row</button>
           <button onClick={this.deleteColumn} id="delCol" className="btns">Delete Column</button>
-          <button id="fillBtn" onClick={this.fillCells} className="btns">Fill all</button>
+          <button id="fillBtn" className="btns">Fill all</button>
           <button id="resetBtn" className="btns">Reset Color</button>
           <button id="fillEmpty" className="btns">Fill Empty</button>
           <form>
